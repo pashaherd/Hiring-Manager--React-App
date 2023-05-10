@@ -1,13 +1,179 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  @import url('https://fonts.googleapis.com/css2?family=Comme:wght@300&display=swap');
+
+
+*{
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0; 
+}
+main{
+    width:100%; 
+    height:fit-content;
+}
+.App{
+    width:100%; 
+    height:fit-content; 
+    min-height:100vh;   
+    background:linear-gradient(180deg, dodgerblue 10%, skyblue);
+    background-size:cover; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav{
+    width:100%; 
+    height:30%; 
+    background-color:rgba(0,0,0,0.1);
+    box-shadow:0 0.25em 2px 2px rgba(0,0,0,0.2); 
+    display:flex;
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center;  
+}
+
+nav h1{
+    font-family:'Comme', sans-serif; 
+    font-size:2em; 
+    text-align:center; 
+    color:rgba(142, 201, 224, 0.76); 
+    text-shadow:0 0 5px rgba(0, 0, 128, 0.644) 
+}
+nav h3{
+    font-family:'Comme', sans-serif; 
+    font-size:1em; 
+}
+
+.decisions{
+    margin-top:3em; 
+    width:100%; 
+    height:fit-content; 
+    display:flex;
+    align-items:center; 
+    justify-content:space-between; 
+    padding:0 2.5em; 
+}
+
+.decisions button{
+    border:none; 
+    background:transparent; 
+    font-family:'Comme',sans-serif; 
+    font-size:1em; 
+    color:skyblue; 
+    cursor:pointer; 
+}
+
+.decisions button:hover{
+    text-shadow: 0 4px 6px rgba(0,0,0,0.6); 
+    transition:text-shadow 0.2s ease-in; 
+}   
+.decisions button:active{
+    transform:scale(0.9); 
+    transition:transform 0.2s ease-in-out; 
+}
+
+
+/*Main Body */ 
+.wrap{
+    width:100%; 
+    height:100%; 
+    display:grid; 
+    grid-template-columns:repeat(auto-fill,minmax(33%,1fr));
+    grid-template-rows:repeat(auto-fill,minmax(33%,1fr));
+}  
+
+.account{
+    place-self:center; 
+    width:80%; 
+    height:80%; 
+    background-color:rgba(78, 143, 168, 0.76); 
+    box-shadow:0 0 3px 2px rgba(0,0,0,0.2); 
+    margin-top:2em; 
+    display:grid; 
+    grid-template-rows:repeat(2,1fr);
+    border-radius:1em;   
+}
+
+.Img{
+    width:fit-content; 
+    height:fit-content;  
+    object-fit:contain; 
+    place-self:center; 
+}
+
+#pp{
+    max-width:70px;
+    max-height:70px; 
+    border-radius:50%; 
+    background-size:contain; 
+    background-position:center; 
+}
+
+.text{
+    text-align:center; 
+    font-family:'Comme',sans-serif; 
+    font-size:.7em; 
+}
+
+#btn,#btn2{
+    height:2em; 
+    outline:0;
+    border:none;
+    font-family:'Comme',sans-serif; 
+    cursor:pointer; 
+}
+
+#btn{
+    background:rgba(38, 190, 38, 0.1);
+    border:1px solid rgba(0,255,0,0.2);  
+}
+
+#btn2{
+    background:rgba(255,0,0,0.1)
+}
+
+#btn:hover{
+    background-color:rgba(0,255,0,0.5); 
+    transition:background-color 0.3s ease-in-out; 
+}
+
+#btn2:hover{
+    background-color:rgba(255,0,0,0.5); 
+    transition:background-color 0.3s ease-in; 
+}
+
+#btn:active, #btn2:active{
+    transform:scale(0.9); 
+}
+
+#n1.toggle, #n2.toggle{
+    border-bottom: 2px solid skyblue; 
+
+}
+
+#n3{
+    color:skyblue; 
+    font-family:'Comme',sans-serif; 
+}
+
+.refresh{
+    font-size:.6em; 
+    font-family:'Comme', sans-serif; 
+    margin-right:2.7em; 
+}
+
+.title{
+    position:absolute; 
+    width:100%; 
+    height:fit-content;
+    display:flex; 
+    justify-content:center;  
+}
+
+#t1,#t2{
+    margin-top:1em; 
+    font-family:'Comme', sans-serif; 
+    color:skyblue; 
+    text-shadow:0 0 7px rgba(0,0,0,0.4);
+    font-size:1em; 
+
+
 }
